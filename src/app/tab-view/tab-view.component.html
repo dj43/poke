@@ -1,0 +1,8 @@
+<div class="header">
+  <button (click)="redirectHome()" class="tablink">Home</button>
+  <button (click)="redirect('details')" class="tablink">Details</button>
+  <button (click)="redirect('evolutions')" class="tablink">Evolutions</button>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

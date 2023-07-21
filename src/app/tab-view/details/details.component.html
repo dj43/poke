@@ -1,0 +1,47 @@
+<div class="page">
+  <div class="title">
+    {{ name }}
+  </div>
+  <div class="container">
+    <img class="image" [src]="image" [alt]="name" />
+    <div>
+      <div class="data">
+        <b>Type</b>
+        <div class="pill">{{ result?.types[0].type.name }}</div>
+      </div>
+      <div class="data">
+        <b>Height</b>
+        <div class="pill">{{ result?.height + " m" }}</div>
+      </div>
+      <div class="data">
+        <b>Weight</b>
+        <div class="pill">{{ result?.weight + " Kg" }}</div>
+      </div>
+      <div class="data">
+        <b>Experience</b>
+        <div class="pill">{{ result?.base_experience }}</div>
+      </div>
+    </div>
+    <div>
+      <div class="data">
+        <b>Abilities</b>
+        <div *ngFor="let ability of result?.abilities" class="pill">
+          {{ ability.ability.name }}
+        </div>
+      </div>
+
+      <div class="data">
+        <b>Moves</b>
+        <div *ngFor="let move of result?.moves.slice(0, 3)" class="pill">
+          {{ move.move.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-container" *ngFor="let stat of result?.stats">
+    <div class="stat">{{ stat.stat.name }}</div>
+    <div class="skills bar" [style.width.%]="stat.base_stat / 1.5">
+      {{ stat.base_stat }}
+    </div>
+  </div>
+</div>

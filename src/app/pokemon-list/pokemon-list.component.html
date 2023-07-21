@@ -1,0 +1,24 @@
+<div
+  class="grid-container"
+  infiniteScroll
+  [infiniteScrollDistance]="1"
+  [infiniteScrollThrottle]="100"
+  (scrolled)="onScroll()"
+>
+  <div class="game-board">
+    <div
+      class="card"
+      *ngFor="let pokemon of pokemonList"
+      (click)="redirect(pokemon)"
+    >
+      <div class="box">
+        <div class="image">
+          <img [src]="pokemon.image" [alt]="pokemon.name" style="width: 50%" />
+        </div>
+        <div class="name">
+          <b>{{ pokemon.name }}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

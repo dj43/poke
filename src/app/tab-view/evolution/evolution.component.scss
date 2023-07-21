@@ -1,0 +1,52 @@
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(200px, 80%/3), 1fr));
+  grid-gap: 20px;
+}
+
+.grid-container {
+  margin: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  text-align: center;
+  border: black solid 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.highlight {
+  background-color: aqua;
+}
+
+.box {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.name {
+  text-transform: capitalize;
+  margin-top: auto;
+  color: white;
+  padding-top: 5px;
+  height: 30px;
+  background-color: black;
+  width: 100%;
+}
